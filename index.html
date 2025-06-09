@@ -4,16 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infográfico Modelo</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/QueryIndex.css">
+  <link rel="stylesheet" href="/src/style/style.css">
+  <link rel="stylesheet" href="/src/style/QueryIndex.css">
+
+  <!-- Modal -->
+  <script src="/src/script/modal.js" defer></script>
+  <!-- grafico -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" ></script>
+  <script src="./src/script/grafico.js" defer></script>
+
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Seção 1: Cabeçalho 
-  <div class="section">
-    <div class="title">Inserir um título</div>
-    <div class="subtitle">Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</div>
-  </div>-->
   
 <main class="container mx-auto px-7 py-8">
       
@@ -22,17 +26,15 @@
         <!-- Header Section -->
         <header class="header-bg">
             <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-2">
-                    CULTURA DE ESTUPRO E VIOLÊNCIA SEXUAL
-                </h1>
-                <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
+              <h1 class="text-4xl font-bold mb-2">
+                CULTURA DE ESTUPRO E VIOLÊNCIA SEXUAL
+              </h1>
+              <hr>
                 <h2 class="text-2xl">
                     O infográfico apresenta dados alarmantes sobre a violência sexual no Brasil,
                     evidenciando como a <span id="cultura-link" class="purple-text" style="cursor:pointer; text-decoration: underline;">cultura</span> do estupro está
                     enraizada socialmente.
                 </h2>
-                <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
-                <hr>
             </div>
         </header>
     </section>
@@ -55,133 +57,23 @@
             colocam a mulher em posição de subordinação e vulnerabilidade. (Sousa, 2017).
         </p>
     </div>
-</div>
-
-<!-- Modal -->
-<script>
-    // Obter elementos
-    const culturaLink = document.getElementById('cultura-link');
-    const modal = document.getElementById('culturaModal');
-    const closeButton = document.getElementById('closeCulturaModal');
-
-    // Quando o link "cultura" é clicado, abrir o modal
-    culturaLink.addEventListener('click', function() {
-        modal.style.display = 'block';
-    });
-
-    // Quando o botão de fechar (X) for clicado, fechar o modal
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    // Se o usuário clicar fora do modal, fechá-lo
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-</script>
+  </div>
       
-
   <!-- Seção 2: 2 colunas com imagem + texto -->
   <div class="section">
     <div class="content-row">
       <div class="column content-image-1">
         <h1 class="text-2xl section-title ml-3">Dados Reais sobre Abuso Sexual Infantil no Brasil (2022)
 </h1>
-    <p class="mb-4 text-justify text-grafic">
-                  Em 2022, foram <strong>40.659 estupros</strong> de menores de 13 anos no Brasil.
-                  Isso representa cerca de <strong>4 estupros por hora</strong>.<br>
-                  A maior parte desses casos acontece dentro de casa e por familiares, conforme relatos oficiais.
-              </p>
+      <p class="mb-4 text-justify text-grafic">
+          Em 2022, foram <strong>40.659 estupros</strong> de menores de 13 anos no Brasil.
+          Isso representa cerca de <strong>4 estupros por hora</strong>.<br>
+          A maior parte desses casos acontece dentro de casa e por familiares, conforme relatos oficiais.
+      </p>
 
-        <canvas id="barChart" style="height: 150px;"></canvas>
+          <!-- Gráfico de barras -->
+        <canvas id="barChart"></canvas>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js" ></script>
-        <script>
-            const ctx = document.getElementById('barChart').getContext('2d');
-            const barChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Estupros em 2022', 'Estupros por hora'],
-                    datasets: [
-                        {
-                            label: 'Total anual',
-                            data: [40659, null],
-                            backgroundColor: '#7a3eb8',
-                            yAxisID: 'y',
-                            borderRadius: 8,
-                            borderSkipped: false
-                        },
-                        {
-                            label: 'Por hora',
-                            data: [null, 4],
-                            backgroundColor: '#b38bda',
-                            yAxisID: 'y1',
-                            borderRadius: 8,
-                            borderSkipped: false
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            type: 'linear',
-                            position: 'left',
-                            beginAtZero: true,
-                            ticks: {
-                                color: '#4b007d',
-                                font: { size: 14, weight: 'bold' },
-                                callback: value => value.toLocaleString()
-                            },
-                            title: {
-                                display: true,
-                                text: 'Número de casos (anual)',
-                                color: '#4b007d',
-                                font: { size: 16, weight: 'bold' }
-                            }
-                        },
-                        y1: {
-                            type: 'linear',
-                            position: 'right',
-                            beginAtZero: true,
-                            grid: { drawOnChartArea: false },
-                            ticks: {
-                                color: '#4b007d',
-                                font: { size: 14, weight: 'bold' },
-                                stepSize: 1
-                            },
-                            title: {
-                                display: true,
-                                text: 'Número de casos (por hora)',
-                                color: '#4b007d',
-                                font: { size: 16, weight: 'bold' }
-                            }
-                        },
-                        x: {
-                            ticks: {
-                                color: '#4b007d',
-                                font: { size: 14, weight: 'bold' }
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: { color: '#4b007d', font: { size: 14 } }
-                        },
-                        tooltip: {
-                            enabled: true,
-                            callbacks: {
-                                label: context => context.parsed.y !== null ? context.parsed.y.toLocaleString() : ''
-                            }
-                        }
-                    }
-                }
-            });
-        </script>
-      
         
         <p class="text text-grafic">Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
       </div>
