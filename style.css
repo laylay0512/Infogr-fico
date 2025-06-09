@@ -109,10 +109,10 @@ h3.text-xl{
     border: none;
 }
 
-.image2{
-    width: 100%;
-    height: 260px;
-    border: none;
+.section-no-mercy{
+    border: 2px solid #9900FF; /* Adicionando borda */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 
@@ -136,6 +136,10 @@ h3.text-xl{
     border: 2px solid #9900FF;
 }
 
+.image2{
+    width: 100%;
+    height: 100%;
+}
 .img-no-mency{
     height: 60%;
     width: 300px;
