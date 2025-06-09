@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter:wght@400;600&family=Now:wght@400;700&display=swap');
 body {
@@ -7,6 +9,19 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #F8F0FC;
     color: #333;
+}
+
+main {
+    background-color: rgb(225, 216, 255);
+    padding: 30px 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 h1.text-4xl{
@@ -26,33 +41,37 @@ h3.text-xl{
     font-weight: bold;
 }
 
+.text-grafic{
+    font-family: 'Antonio', 'Inter', sans-serif;
+    font-size: .9em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-title{
+    font-family: 'Antonio', 'Inter', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .header-bg {
-        /*a parte de cima q tinha a faixa roxa agr n tem mais*/
-        /* background-color: #bb80ff;  Deep purple from PDF */
-        color: rgb(161, 2, 253);
-        padding: 2rem 0;
-        text-align: center;
-    }
+    /*a parte de cima q tinha a faixa roxa agr n tem mais*/
+    /* background-color: #bb80ff;  Deep purple from PDF */
+    color: rgb(161, 2, 253);
+    padding: 2rem 0;
+    text-align: center;
+}
 
 
 .section-title {
-        color: rgb(161, 2, 253);
-        /* Slightly lighter deep purple */
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        text-align: center; /* Centraliza o texto */
-    }
-
-
-.section {
-    background-color: rgb(225, 216, 255);
-    padding: 30px 20px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1000px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+    color: rgb(161, 2, 253);
+    /* Slightly lighter deep purple */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-align: center; /* Centraliza o texto */
 }
+
 
 .title {
     text-align: center;
@@ -82,6 +101,21 @@ h3.text-xl{
     padding: 15px;
 }
 
+.content-image-1{
+    text-align: center;
+}
+
+.content-image-1, .content-image-2, .content-image-3,.content-image-5{
+    border: none;
+}
+
+.image2{
+    width: 100%;
+    height: 260px;
+    border: none;
+}
+
+
 .coments{
     display: flex;
     flex-direction: column;
@@ -99,6 +133,19 @@ h3.text-xl{
     justify-content: center;
     font-weight: bold;
     color: white;
+    border: 2px solid #9900FF;
+}
+
+.img-no-mency{
+    height: 60%;
+    width: 300px;
+}
+
+.content-image-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .text {
