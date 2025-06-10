@@ -177,7 +177,11 @@ h3.text-xl{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 0;
+}
+
+.content-image-3{
+    padding: 0;
 }
 
 .text {
@@ -249,7 +253,7 @@ h3.text-xl{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 100px;
 }   
 
 .content-denuncias {
@@ -265,7 +269,7 @@ h3.text-xl{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 70%;
+    width: 50%;
 }
 
 .div-direita{
@@ -273,7 +277,7 @@ h3.text-xl{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 50%;
     list-style-position: inside;
 }
 
@@ -423,13 +427,9 @@ caption {
     margin-bottom: 20px;
 }
 
-.chart-container3 {
-    width: 100%;
-    margin: auto;
-}
-
 .chart-container3{
     width: 100px;
+    margin: auto;
 }
 
 .fonte3 {
@@ -452,8 +452,7 @@ caption {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: .8em
-    ;
+    font-size: .8em;
 }
 
 .cor {
