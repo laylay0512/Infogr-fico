@@ -116,8 +116,7 @@
   <div class="section section-denuncias">
     <div class="content-row div-esquerda">
       <div class="column content-denuncias">
-        <p class="text">Deuncias totais de estupro de vulneravel entre 2022-2023
-          Numero absoluts em 2022 .</p>
+        <h3 class="text-2xl">Denúncias totais de estupro de vulnerável entre 2022-2023</h3>
         
         <ul">
           <li class="text">Números absolutos em 2022: 78.887 (Taxa: 38,8%)</li>
@@ -151,6 +150,7 @@
       <div class="column content-denuncias">
         <p class="text">Mauris nec dolor in eros commodo tempor.</p>
         <div class="image-placeholder">Imagem 7</div>
+        
       </div>
 
       <div class="column content-denuncias">
@@ -176,22 +176,168 @@
       </div>
 
       <div class="column">
-        <img class="image-placeholder" width="100" src="" alt="">
+          <table>
+      <caption>Relação entre vítima e autor para registros de estupro e estupro de vulnerável, por idade<br>Brasil, 2023</caption>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Até 13 anos</th>
+          <th>14 anos +</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Familiar</td>
+          <td>64,0</td>
+          <td>31,2</td>
+          <td>48,1</td>
+        </tr>
+        <tr>
+          <td>Parceiro íntimo</td>
+          <td>–</td>
+          <td>28,1</td>
+          <td>8,2</td>
+        </tr>
+        <tr>
+          <td>Ex-parceiro íntimo</td>
+          <td>–</td>
+          <td>6,3</td>
+          <td>4,6</td>
+        </tr>
+        <tr>
+          <td>Outros conhecidos</td>
+          <td>22,4</td>
+          <td>13,7</td>
+          <td>18,3</td>
+        </tr>
+        <tr>
+          <td>Desconhecidos</td>
+          <td>13,6</td>
+          <td>15,6</td>
+          <td>15,0</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="nota">
+      <strong>Fonte:</strong> Polícia civil (dados extraídos dos boletins de ocorrência das unidades policiais civis). Elaboração: Fórum Brasileiro de Segurança Pública a partir dos dados do Sistema Nacional de Informações de Segurança Pública, Prisionais e sobre Drogas (Sinesp) - Ministério da Justiça e Segurança Pública, 2024.
+    </div>
+
       </div>
     </div>
   </div>
 
   <div class="content-row">
-      <div class="column column-final">
-        <img class="image-placeholder" width="100" src="" alt="">
+      <div class="column column-final column-final-esquerda">
+        <h2>Distribuição percentual das notificações de violência sexual por tipo de violência (Brasil, 2022)</h2>
+
+  <div class="chart-container">
+    <canvas id="graficoRosca"></canvas>
+  </div>
+
+  <p class="fonte">
+    <strong>Fonte:</strong> Ministério da Saúde, Sistema de Informação de Agravos de Notificação (Sinan) – versão preliminar.
+  </p>
+
       </div>
 
-      <div class="column column-final">
-        <img class="image-placeholder" width="100" src="" alt="">
+      <div class="column column-final column-final-direita">
+        <h3 class="text-4xl">Local em que ocorreu o estupro ou estupro de vulnerável (Brasil, 2022)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Local</th>
+              <th>Estupro</th>
+              <th>Estupro de vulnerável</th>
+              <th>Estupro + Estupro de vulnerável</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Residência</td>
+              <td>52,1</td>
+              <td>64,7</td>
+              <td>61,7</td>
+            </tr>
+            <tr>
+              <td>Via pública</td>
+              <td>22,5</td>
+              <td>7,1</td>
+              <td>11,9</td>
+            </tr>
+            <tr>
+              <td>Área rural</td>
+              <td>2,7</td>
+              <td>2,5</td>
+              <td>2,5</td>
+            </tr>
+            <tr>
+              <td>Meio de transporte</td>
+              <td>2,3</td>
+              <td>1,1</td>
+              <td>1,5</td>
+            </tr>
+            <tr>
+              <td>Estabelecimento comercial/financeiro</td>
+              <td>1,8</td>
+              <td>0,4</td>
+              <td>1,0</td>
+            </tr>
+            <tr>
+              <td>Hospital</td>
+              <td>0,1</td>
+              <td>0,2</td>
+              <td>0,2</td>
+            </tr>
+            <tr>
+              <td>Outros</td>
+              <td>18,5</td>
+              <td>24,0</td>
+              <td>21,2</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="fonte">
+          <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros de boletins de ocorrência das Secretarias estaduais de Segurança Pública e Defesa Social. Fonte: Fórum Brasileiro de Segurança Pública, 2023.
+        </p>
       </div>
     </div>
   </div>
   </main>
 
+  <script>
+    const ctx = document.getElementById('graficoRosca').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Amarela', 'branca', 'Indígena', 'Negra'],
+        datasets: [{
+          data: [0.4, 46.9, 0.5, 52.5],
+          backgroundColor: ['#ffa500', '#AED581', '#4DB6AC', '#7E57C2'],
+          borderColor: ['#fff', '#fff', '#fff', '#fff'],
+          borderWidth: 1,
+          hoverOffset: 4,
+          hoverBackgroundColor: ['#ff8c00', '#81C784', '#26A69A', '#5E35B1'],
+          hoverBorderColor: ['#fff', '#fff', '#fff', '#fff']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'right'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label + ': ' + context.raw + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
