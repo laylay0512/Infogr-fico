@@ -74,7 +74,7 @@
       </p>
 
           <!-- Gráfico de barras -->
-        <canvas id="barChart"></canvas>
+        <canvas id="barChart0"></canvas>
 
         
         <p class="text text-grafic">Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
@@ -150,9 +150,20 @@
       </div>
       
       <div class="column content-denuncias">
-        <p class="text">Mauris nec dolor in eros commodo tempor.</p>
-        <div class="image-placeholder">Imagem 7</div>
-        
+          <h4>Distribuição das ocorrências de estupro e estupro de vulnerável</h4>
+          <p class="subtitulo3">Brasil, 2023</p>
+
+          <div class="chart-container3">
+            <canvas id="graficoRoscaEstupro"></canvas>
+            <div class="legenda3">
+              <div class="legenda-item3"><div class="cor cor1"></div> Estupro</div>
+              <div class="legenda-item3"><div class="cor cor2"></div> Estupro de vulnerável</div>
+            </div>
+          </div>
+
+          <p class="fonte">
+            <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança Pública.
+          </p>
       </div>
 
       <div class="column content-denuncias">
@@ -238,79 +249,77 @@
     </div>
   </div>
 
-  <div class="content-row">
-      <div class="column column-final column-final-esquerda">
-        <h3>Distribuição percentual das notificações de violência sexual por tipo de violência (Brasil, 2022)</h3>
-
-  <div class="chart-container">
-    <canvas id="graficoRosca"></canvas>
-  </div>
-
-  <p class="fonte">
-    <strong>Fonte:</strong> Ministério da Saúde, Sistema de Informação de Agravos de Notificação (Sinan) – versão preliminar.
-  </p>
-
-      </div>
-
-      <div class="column column-final column-final-direita">
-        <h3 class="text-4xl">Local em que ocorreu o estupro ou estupro de vulnerável (Brasil, 2022)</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Local</th>
-              <th>Estupro</th>
-              <th>Estupro de vulnerável</th>
-              <th>Estupro + Estupro de vulnerável</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Residência</td>
-              <td>52,1</td>
-              <td>64,7</td>
-              <td>61,7</td>
-            </tr>
-            <tr>
-              <td>Via pública</td>
-              <td>22,5</td>
-              <td>7,1</td>
-              <td>11,9</td>
-            </tr>
-            <tr>
-              <td>Área rural</td>
-              <td>2,7</td>
-              <td>2,5</td>
-              <td>2,5</td>
-            </tr>
-            <tr>
-              <td>Meio de transporte</td>
-              <td>2,3</td>
-              <td>1,1</td>
-              <td>1,5</td>
-            </tr>
-            <tr>
-              <td>Estabelecimento comercial/financeiro</td>
-              <td>1,8</td>
-              <td>0,4</td>
-              <td>1,0</td>
-            </tr>
-            <tr>
-              <td>Hospital</td>
-              <td>0,1</td>
-              <td>0,2</td>
-              <td>0,2</td>
-            </tr>
-            <tr>
-              <td>Outros</td>
-              <td>18,5</td>
-              <td>24,0</td>
-              <td>21,2</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="fonte">
-          <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros de boletins de ocorrência das Secretarias estaduais de Segurança Pública e Defesa Social. Fonte: Fórum Brasileiro de Segurança Pública, 2023.
-        </p>
+  <div class="section section-final">
+    <div class="content-row">
+        <div class="column column-final column-final-esquerda">
+          <h3>Distribuição percentual das notificações de violência sexual por tipo de violência (Brasil, 2022)</h3>
+    <div class="chart-container">
+      <canvas id="graficoRosca"></canvas>
+    </div>
+    <p class="fonte">
+      <strong>Fonte:</strong> Ministério da Saúde, Sistema de Informação de Agravos de Notificação (Sinan) – versão preliminar.
+    </p>
+        </div>
+        <div class="column column-final column-final-direita">
+          <h3 class="text-4xl">Local em que ocorreu o estupro ou estupro de vulnerável (Brasil, 2022)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Local</th>
+                <th>Estupro</th>
+                <th>Estupro de vulnerável</th>
+                <th>Estupro + Estupro de vulnerável</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Residência</td>
+                <td>52,1</td>
+                <td>64,7</td>
+                <td>61,7</td>
+              </tr>
+              <tr>
+                <td>Via pública</td>
+                <td>22,5</td>
+                <td>7,1</td>
+                <td>11,9</td>
+              </tr>
+              <tr>
+                <td>Área rural</td>
+                <td>2,7</td>
+                <td>2,5</td>
+                <td>2,5</td>
+              </tr>
+              <tr>
+                <td>Meio de transporte</td>
+                <td>2,3</td>
+                <td>1,1</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Estabelecimento comercial/financeiro</td>
+                <td>1,8</td>
+                <td>0,4</td>
+                <td>1,0</td>
+              </tr>
+              <tr>
+                <td>Hospital</td>
+                <td>0,1</td>
+                <td>0,2</td>
+                <td>0,2</td>
+              </tr>
+              <tr>
+                <td>Outros</td>
+                <td>18,5</td>
+                <td>24,0</td>
+                <td>21,2</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="fonte">
+            <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros de boletins de ocorrência das Secretarias estaduais de Segurança Pública e Defesa Social. Fonte: Fórum Brasileiro de Segurança Pública, 2023.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -384,6 +393,39 @@
         plugins: {
           legend: {
             position: 'right'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label + ': ' + context.raw + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+
+  <script>
+    const rosca3 = document.getElementById('graficoRoscaEstupro').getContext('2d');
+
+    new Chart(rosca3, {
+      type: 'doughnut',
+      data: {
+        labels: ['Estupro', 'Estupro de vulnerável'],
+        datasets: [{
+          data: [24, 76],
+          backgroundColor: ['#B39DDB', '#7E57C2'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        cutout: '60%',
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
           },
           tooltip: {
             callbacks: {

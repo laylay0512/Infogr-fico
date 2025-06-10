@@ -1,5 +1,5 @@
-const ctx = document.getElementById('barChart').getContext('2d');
-const barChart = new Chart(ctx, {
+const grafico0 = document.getElementById('barChart0').getContext('2d');
+const barChart = new Chart(grafico0, {
     type: 'bar',
     data: {
         labels: ['Estupros em 2022', 'Estupros por hora'],
