@@ -77,7 +77,7 @@
         <canvas id="barChart0"></canvas>
 
         
-        <p class="text text-grafic">Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
+        <p class="text text-grafic">Fonte: Anuário Brasileiro de Segurança Pública 2023 / TRT-MG</p>
       </div>
       <div class="column content-image-2">
         <div class="image-placeholder"><img src="./images/imagem2.webp" class="image2" alt=""></div>
@@ -104,12 +104,16 @@
       </div>
       
       <div class="column content-image-5">
-        <div class="image-placeholder img-no-mency"><img width="100%" height="100%" src="./images/mapa-brasil-pequeno.png" alt=""></div>
+        <div class="img-no-mency">
+          <img width="100%" height="100%" src="./images/mapa-brasil-pequeno.png" alt="">
+
         <h2 class="text-xl font-semibold mb-2">Detalhes do Jogo</h2>
+
         <ul class="list-disc list-inside text-gray-700">
           <li>Jogo Custava 11,99 USD</li>
           <li>Foi banido de países como o Reino Unido, Austrália, Portugal e Canadá</li>
         </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -129,7 +133,16 @@
       </div>
       
       <div class="content-denuncias">
-        <div class="image-placeholder img-grafico-casos"><img width="100%" height="100%" src="./images/grafico-casos-de-estrupo-por-ano.webp" alt=""></div>
+        <h2>Evolução do número de vítimas de estupros e estupros de vulnerável</h2>
+        <p class="subtitulo">Brasil, 2011-2023</p>
+
+        <div class="chart-container4">
+          <canvas id="graficoLinhaEstupro"></canvas>
+        </div>
+
+        <p class="fonte">
+          <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança.
+        </p>
       </div>
       
       <div class="column content-denuncias seta">
@@ -142,7 +155,7 @@
 
     <div class="content-row div-direita">
       <div class="column content-denuncias">
-        <p class="text">Denúncias de estupro e estupro de vulnerável - vítimas mulheres:</p>
+        <h4>Denúncias de estupro e estupro de vulnerável - vítimas mulheres:</h4>
         <ul>
           <li class="text">Números absolutos em 2022: 68.798 (Taxa: 65,8%)</li>
           <li class="text">Números absolutos em 2023: 72.454 (Taxa: 69,3%)</li>
@@ -167,8 +180,20 @@
       </div>
 
       <div class="column content-denuncias">
-        <p class="text">Mauris nec dolor in eros commodo tempor.</p>
-        <div class="image-placeholder">Imagem 8</div>
+        <h4>Vítimas de estupro e estupro de vulnerável, por sexo (em %)</h4>
+        <p class="subtitulo3">Brasil, 2023</p>
+
+        <div class="chart-container3">
+          <canvas id="graficoSexoEstupro"></canvas>
+          <div class="legenda3">
+            <div class="legenda-item3"><div class="cor cor1"></div> Feminino</div>
+            <div class="legenda-item3"><div class="cor cor2"></div> Masculino</div>
+          </div>
+        </div>
+
+        <p class="fonte">
+          <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros policiais e das Secretarias estaduais de Segurança Pública e/ou Defesa Social. Fórum Brasileiro de Segurança Pública, 2024.
+        </p>
       </div>
     </div>
   </div>
@@ -325,7 +350,7 @@
   </div>
   </main>
 
-  <script>
+  <script defer>
     const barras = document.getElementById('graficoBarras').getContext('2d');
 
     new Chart(barras, {
@@ -371,7 +396,7 @@
     });
   </script>
 
-  <script>
+  <script defer>
     const ctx = document.getElementById('graficoRosca').getContext('2d');
 
     new Chart(ctx, {
@@ -407,7 +432,7 @@
   </script>
 
 
-  <script>
+  <script defer>
     const rosca3 = document.getElementById('graficoRoscaEstupro').getContext('2d');
 
     new Chart(rosca3, {
@@ -417,6 +442,89 @@
         datasets: [{
           data: [24, 76],
           backgroundColor: ['#B39DDB', '#7E57C2'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        cutout: '60%',
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label + ': ' + context.raw + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+  <script defer>
+    const graficolinha = document.getElementById('graficoLinhaEstupro').getContext('2d');
+
+    new Chart(graficolinha, {
+      type: 'line',
+      data: {
+        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Nº de vítimas',
+          data: [43869, 50224, 51090, 50438, 47461, 55070, 63157, 66893, 69886, 62917, 68885, 78887, 83988],
+          borderColor: '#5E2A7B',
+          backgroundColor: '#5E2A7B',
+          fill: false,
+          tension: 0.3,
+          pointBackgroundColor: '#5E2A7B',
+          pointRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: {
+              display: true,
+              text: 'Número de vítimas'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Ano'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.raw.toLocaleString('pt-BR') + ' vítimas';
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+  <script defer>
+    const grafico5 = document.getElementById('graficoSexoEstupro').getContext('2d');
+
+    new Chart(grafico5, {
+      type: 'doughnut',
+      data: {
+        labels: ['Feminino', 'Masculino'],
+        datasets: [{
+          data: [88.2, 11.8],
+          backgroundColor: ['#B39DDB', '#5E2A7B'],
           borderWidth: 1
         }]
       },
