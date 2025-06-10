@@ -398,3 +398,15 @@ caption {
     color: #555;
     text-align: center;
 }
+
+.subtitulo2 {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.chart-container2 {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
