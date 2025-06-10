@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter:wght@400;600&family=Now:wght@400;700&display=swap');
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
     background-color: #F8F0FC;
     color: #333;
 }
@@ -26,7 +25,8 @@ main {
 
 h1.text-4xl{
     text-shadow: 2px 2px 0 #222;
-    font-family: 'Antonio', 'Inter', sans-serif; font-weight: bold;
+    font-family: 'Antonio', 'Inter', sans-serif;
+    font-weight: bold;
     font-size: 4em;
     margin-bottom: 20px;
 }
@@ -39,6 +39,23 @@ h2.text-2xl{
 h3.text-xl{
     text-align: center;
     font-weight: bold;
+}
+
+.h2-image2{
+    text-align: center;
+    font-family: 'Antonio', 'Inter', sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+.text-image2{
+    font-family: 'Antonio', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .text-grafic{
@@ -220,4 +237,104 @@ h3.text-xl{
 .close-button:hover {
     cursor: pointer;
     color: darkred;
+}
+
+.section-denuncias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}   
+
+.content-denuncias {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    list-style-position: inside;
+}
+
+.div-esquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.div-direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    list-style-position: inside;
+}
+
+.img-grafico-casos{
+    max-height: 300px;
+    min-height: 240px
+}
+
+.seta{
+    flex-direction: row;
+    display: flex;
+    gap: 
+    50px;
+    padding-left: 30px;
+    border: none;
+    margin-left: 20px;
+}
+.seta img{
+    transform: rotate(340deg);
+}
+
+.section-pais{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.div-esquerda-pais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.div-esquerda-pais p{
+    font-size: .75em;
+    color: #333;
+    text-align: center;
+}
+
+.div-esquerda-pais .column{
+    border: none;
+}
+
+.div-esquerda-pais img{
+    width: 100%;
+    max-height: 400px;
+    min-height: 360px;
+}
+
+.div-direita-pais{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.div-direita-pais .column{
+    border: none;
+}
+
+.div-direita-pais .column img{
+    height: 100%;
+}
+
+.column-final{
+    padding: 10px;
+    border: none;
 }
