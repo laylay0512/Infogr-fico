@@ -256,7 +256,7 @@ h3.text-xl{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 5px;
+    padding: 5px;;
     list-style-position: inside;
 }
 
@@ -428,9 +428,13 @@ caption {
     margin: auto;
 }
 
+.chart-container3{
+    width: 100px;
+}
+
 .fonte3 {
     margin-top: 20px;
-    font-size: 0.6em;
+    font-size: 10px;
     color: #555;
     text-align: center;
     margin-left: auto;
