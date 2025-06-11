@@ -14,278 +14,291 @@
   <script src="./src/script/grafico.js" defer></script>
   <script src="./src/script/graficoBarras.js" defer></script>
   <script src="./src/script/roscaFinal.js" defer></script>
+  <script src="./src/script/graficoRoscaEstupro.js" defer></script>
+  <script src="./src/script/graficoLinhaEstupro.js" defer></script>
+  <script src="./src/script/graficoSexoEstupro.js" defer></script>
+  <script src="./src/script/lostLifeModal.js" defer></script>
 
   <!-- Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
 </head>
 <body>
-  
-<main class="container mx-auto px-7 py-8">
+  <main class="container mx-auto px-7 py-8">
       
-<div class="section">
-    <section class="card">
-        <!-- Header Section -->
-        <header class="header-bg">
-            <div class="container mx-auto px-4">
-              <h1 class="text-4xl font-bold mb-2">
-                CULTURA DE ESTUPRO E VIOLÊNCIA SEXUAL
-              </h1>
-              <hr>
-                <h2 class="text-2xl">
-                    O infográfico apresenta dados alarmantes sobre a violência sexual no Brasil,
-                    evidenciando como a <span id="cultura-link" class="purple-text" style="cursor:pointer; text-decoration: underline;">cultura</span> do estupro está
-                    enraizada socialmente.
-                </h2>
+    <div class="section">
+        <section class="card">
+            <!-- Header Section -->
+            <header class="header-bg">
+                <div class="container mx-auto px-4">
+                  <h1 class="text-4xl font-bold mb-2">
+                    CULTURA DE ESTUPRO E VIOLÊNCIA SEXUAL
+                  </h1>
+                  <hr id="hr-header">
+                    <h2 class="text-2xl">
+                        O infográfico apresenta dados alarmantes sobre a violência sexual no Brasil,
+                        evidenciando como a <span id="cultura-link" class="purple-text" style="cursor:pointer; text-decoration: underline;">cultura</span> do estupro está
+                        enraizada socialmente.
+                    </h2>
+                </div>
+            </header>
+        </section>
+    </div>
+
+    <!-- Cultura Modal -->
+    <div id="culturaModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" id="closeCulturaModal">&times;</span>
+            <h3 class="text-xl font-semibold mb-4">O que é "Cultura do Estupro"?</h3>
+            <p class="text-gray-800">
+                O termo "cultura do estupro" é utilizado para descrever práticas sociais naturalizadas que banalizam,
+                justificam ou toleram a violência sexual, tornando-a parte do cotidiano, e não um fato isolado. Segundo
+                Marilena Chaui (1986): "em sentido amplo, cultura [...] é o campo simbólico e material das atividades
+                humanas (p.14). [...]. A cultura do estupro está profundamente ligada ao machismo e à misoginia, que
+                reforçam comportamentos e discursos que perpetuam a violência contra a mulher. Trata-se, portanto, de um
+                problema estrutural, sustentado por valores e práticas culturais que incentivam, direta ou
+                indiretamente, esse tipo de violência. A cultura do estupro é um reflexo de uma sociedade machista e
+                misógina, na qual a violência sexual é naturalizada, sustentada e reproduzida por práticas culturais que
+                colocam a mulher em posição de subordinação e vulnerabilidade. (Sousa, 2017).
+            </p>
+        </div>
+    </div>
+
+    <!-- Lost Life Modal -->
+    <div id="lostLifeModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" id="closelostLifeModal">&times;</span>
+            <h3 class="text-xl font-semibold mb-4">Lost Life</h3>
+            <div class="modal-image">
+                <img src="./images/lost-life-12jpeg.jpeg" alt="Lost Life Game" style="width: 100%; height: auto;">
             </div>
-        </header>
-    </section>
-</div>
-
-<!-- Cultura Modal -->
-<div id="culturaModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close-button" id="closeCulturaModal">&times;</span>
-        <h3 class="text-xl font-semibold mb-4">O que é "Cultura do Estupro"?</h3>
-        <p class="text-gray-800">
-            O termo "cultura do estupro" é utilizado para descrever práticas sociais naturalizadas que banalizam,
-            justificam ou toleram a violência sexual, tornando-a parte do cotidiano, e não um fato isolado. Segundo
-            Marilena Chaui (1986): "em sentido amplo, cultura [...] é o campo simbólico e material das atividades
-            humanas (p.14). [...]. A cultura do estupro está profundamente ligada ao machismo e à misoginia, que
-            reforçam comportamentos e discursos que perpetuam a violência contra a mulher. Trata-se, portanto, de um
-            problema estrutural, sustentado por valores e práticas culturais que incentivam, direta ou
-            indiretamente, esse tipo de violência. A cultura do estupro é um reflexo de uma sociedade machista e
-            misógina, na qual a violência sexual é naturalizada, sustentada e reproduzida por práticas culturais que
-            colocam a mulher em posição de subordinação e vulnerabilidade. (Sousa, 2017).
-        </p>
+        </div>
     </div>
-  </div>
       
-  <!-- Seção 2: 2 colunas com imagem + texto -->
-  <div class="section">
-    <div class="content-row">
-      <div class="column content-image-1">
-        <h1 class="text-2xl section-title ml-3">Dados Reais sobre Abuso Sexual Infantil no Brasil (2022)
-</h1>
-      <p class="mb-4 text-justify text-grafic">
-          Em 2022, foram <strong>40.659 estupros</strong> de menores de 13 anos no Brasil.
-          Isso representa cerca de <strong>4 estupros por hora</strong>.<br>
-          A maior parte desses casos acontece dentro de casa e por familiares, conforme relatos oficiais.
-      </p>
+    <!-- Seção 2: 2 colunas com imagem + texto -->
+    <div class="section section-izabely">
+      <div class="content-row">
+        <div class="column content-image-1">
+          <h1 class="text-2xl section-title ml-3">Dados Reais sobre Abuso Sexual Infantil no Brasil (2022)</h1>
+        <p class="mb-4 text-justify text-grafic">
+            Em 2022, foram <strong>40.659 estupros</strong> de menores de 13 anos no Brasil.
+            Isso representa cerca de <strong>4 estupros por hora</strong>.<br>
+            A maior parte desses casos acontece dentro de casa e por familiares, conforme relatos oficiais.
+        </p>
 
-          <!-- Gráfico de barras -->
-        <canvas id="barChart0"></canvas>
+            <!-- Gráfico de barras -->
+          <canvas id="barChart0"></canvas>
 
+          
+          <p class="text text-grafic">Fonte: Anuário Brasileiro de Segurança Pública 2023 / TRT-MG</p>
+        </div>
+        <div class="column content-image-2">
+          <div class="image-placeholder"><img src="./images/lost-life-1.jpeg" class="image2" alt=""></div>
+          <h2 class="h2-image2">Caso Lost Life</h2>
+          <p class="text text-image2">O jogo Lost Life, embora apresentado como um terror psicológico, reforça elementos alarmantes da cultura do estupro ao romantizar e erotizar a vulnerabilidade de uma personagem feminina infantilizada. Ao colocar o jogador no papel de alguém que controla o cotidiano de uma jovem colegial, inclusive suas roupas e reações emocionais, o jogo legitima relações de dominação e medo, travestidas de "interação lúdica". Essa lógica perversa sustenta a ideia de que o sofrimento feminino pode ser fonte de prazer ou punição moral, contribuindo para a naturalização da violência simbólica e psicológica contra meninas e mulheres. Em vez de promover reflexão crítica, Lost Life banaliza temas graves, tornando-se um exemplo claro de como a indústria dos games pode reproduzir — e até incentivar — comportamentos alinhados à cultura do estupro.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção 3: Imagem + texto com lista -->
+    <div class="section section-no-mercy">
+      <h2 class="text-2xl section-title"> "NO MERCY" E A BANALIZAÇÃO DA VIOLÊNCIA </h2>
+  
+      <div class="content-row">
+        <div class="column content-image-3 coments">
+          <p class="mb-4 text-justify"> O jogo "No Mercy" gerou enorme polêmica por permitir que jogadores encenem feminicídios, estupros e torturas, simulando agressões contra mulheres de forma explícita. Apesar do banimento, muitos usuários defenderam o jogo, ignorando seu impacto social e psicológico na cultura da violência de gênero. </p>
+          <div class="image-placeholder">
+            <img height="100%" width="100%" src="./images/no-mercy-game.png" alt="">
+          </div>
+
+          <div class="image-placeholder">
+            <img height="100%" width="100%" src="./images/tiktok-comments.png" alt="">
+          </div>
+        </div>
         
-        <p class="text text-grafic">Fonte: Anuário Brasileiro de Segurança Pública 2023 / TRT-MG</p>
-      </div>
-      <div class="column content-image-2">
-        <div class="image-placeholder"><img src="./images/imagem2.webp" class="image2" alt=""></div>
-        <h2 class="h2-image2">Caso Izabelly Vidal</h2>
-        <p class="text text-image2">Após acusar o influenciador Hytalo Santos de aliciar menores, influenciadora Izabelly Vidal diz ter sofrido abuso de homem que lhe prometeu ajuda.</p>
-      </div>
-    </div>
-  </div>
+        <div class="column content-image-5">
+          <div class="img-no-mency">
+            <img width="100%" height="100%" src="./images/mapa-brasil-pequeno.png" alt="">
+            
 
-  <!-- Seção 3: Imagem + texto com lista -->
-  <div class="section section-no-mercy">
-     <h2 class="text-2xl section-title"> "NO MERCY" E A BANALIZAÇÃO DA VIOLÊNCIA </h2>
- 
-    <div class="content-row">
-      <div class="column content-image-3 coments">
-        <p class="mb-4 text-justify"> O jogo "No Mercy" gerou enorme polêmica por permitir que jogadores encenem feminicídios, estupros e torturas, simulando agressões contra mulheres de forma explícita. Apesar do banimento, muitos usuários defenderam o jogo, ignorando seu impacto social e psicológico na cultura da violência de gênero. </p>
-        <div class="image-placeholder">
-          <img height="100%" width="100%" src="./images/no-mercy-game.png" alt="">
-        </div>
+          <h2 class="text-xl font-semibold mb-2">Detalhes do Jogo</h2>
 
-        <div class="image-placeholder">
-          <img height="100%" width="100%" src="./images/tiktok-comments.png" alt="">
-        </div>
-      </div>
-      
-      <div class="column content-image-5">
-        <div class="img-no-mency">
-          <img width="100%" height="100%" src="./images/mapa-brasil-pequeno.png" alt="">
-
-        <h2 class="text-xl font-semibold mb-2">Detalhes do Jogo</h2>
-
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Jogo Custava 11,99 USD</li>
-          <li>Foi banido de países como o Reino Unido, Austrália, Portugal e Canadá</li>
-        </ul>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Jogo Custava 11,99 USD</li>
+            <li>Foi banido de países como o Reino Unido, Austrália, Portugal e Canadá</li>
+          </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Seção 4: Texto + Imagens -->
-  <div class="section section-denuncias">
-    <div class="content-row div-esquerda">
-      <div class="column content-denuncias">
-        <h3 class="text-2xl">Denúncias totais de estupro de vulnerável entre 2022-2023</h3>
+    <!-- Seção 4: Texto + Imagens -->
+    <div class="section section-denuncias">
+      <div class="content-row div-esquerda">
+        <div class="column content-denuncias">
+          <h3 class="text-2xl">Denúncias totais de estupro de vulnerável entre 2022-2023</h3>
+          
+          <ul>
+            <li class="text">Números absolutos em 2022: 78.887 (Taxa: 38,8%)</li>
+            <li class="text">Números absolutos em 2023: 83.988 (Taxa: 41,4%)</li>
+            <li class="text">Estado com maior número de denúncias: São Paulo</li>
+            <li class="text">Estado com menor número de denúncias: Paraíba</li>
+          </ul>
+        </div>
         
-        <ul">
-          <li class="text">Números absolutos em 2022: 78.887 (Taxa: 38,8%)</li>
-          <li class="text">Números absolutos em 2023: 83.988 (Taxa: 41,4%)</li>
-          <li class="text">Estado com maior número de denúncias: São Paulo</li>
-          <li class="text">Estado com menor número de denúncias: Paraíba</li>
-        </ul>
-      </div>
-      
-      <div class="content-denuncias">
-        <h2>Evolução do número de vítimas de estupros e estupros de vulnerável</h2>
-        <p class="subtitulo">Brasil, 2011-2023</p>
+        <div class="content-denuncias section-no-mercy">
+          <h2 id="titulo-evolucao-vitimas">Evolução do número de vítimas de estupros e estupros de vulnerável</h2>
+          <p class="subtitulo">Brasil, 2011-2023</p>
 
-        <div class="chart-container4">
-          <canvas id="graficoLinhaEstupro"></canvas>
+          <div class="chart-container4">
+            <canvas id="graficoLinhaEstupro"></canvas>
+          </div>
+
+          <p class="fonte legenda-grafico">
+            <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança.
+          </p>
+        </div>
+        
+        <div class="column content-denuncias seta">
+          <img src="./src/icons/seta.png" width="50" alt="">
+          <p class="text">
+            Em 2011, primeiro ano da série histórica do gráfico abaixo, 43.869 pessoas foram vítimas de estupro ou estupro de vulnerável no Brasil. Desde então, com crescimento quase ininterrupto ao longo dos anos, o país tem atingido novos recordes e, em um período de 13 anos, o crescimento do número de vítimas chegou a 91,5%.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-row div-direita">
+        <div class="column content-denuncias">
+          <h4>Denúncias de estupro e estupro de vulnerável - vítimas mulheres:</h4>
+          <ul>
+            <li class="text numero-absoluto">Números absolutos em 2022: 68.798 (Taxa: 65,8%)</li>
+            <li class="text numero-absoluto">Números absolutos em 2023: 72.454 (Taxa: 69,3%)</li>
+          </ul>
+        </div>
+        
+        <div class="column content-denuncias">
+            <h4>Distribuição das ocorrências de estupro e estupro de vulnerável</h4>
+            <p class="subtitulo3">Brasil, 2023</p>
+
+            <div class="chart-container3">
+              <canvas id="graficoRoscaEstupro"></canvas>
+              <div class="legenda3">
+                <div class="legenda-item3"><div class="cor cor1"></div> Estupro</div>
+                <div class="legenda-item3"><div class="cor cor2"></div> Estupro de vulnerável</div>
+              </div>
+            </div>
+
+            <p class="fonte legenda-grafico">
+              <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança Pública.
+            </p>
         </div>
 
-        <p class="fonte">
-          <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança.
-        </p>
-      </div>
-      
-      <div class="column content-denuncias seta">
-        <img src="./src/icons/seta.png" width="50" alt="">
-        <p class="text">
-          Em 2011, primeiro ano da série histórica do gráfico abaixo, 43.869 pessoas foram vítimas de estupro ou estupro de vulnerável no Brasil. Desde então, com crescimento quase ininterrupto ao longo dos anos, o país tem atingido novos recordes e, em um período de 13 anos, o crescimento do número de vítimas chegou a 91,5%.
-        </p>
-      </div>
-    </div>
-
-    <div class="content-row div-direita">
-      <div class="column content-denuncias">
-        <h4>Denúncias de estupro e estupro de vulnerável - vítimas mulheres:</h4>
-        <ul>
-          <li class="text">Números absolutos em 2022: 68.798 (Taxa: 65,8%)</li>
-          <li class="text">Números absolutos em 2023: 72.454 (Taxa: 69,3%)</li>
-        </ul>
-      </div>
-      
-      <div class="column content-denuncias">
-          <h4>Distribuição das ocorrências de estupro e estupro de vulnerável</h4>
+        <div class="column content-denuncias">
+          <h4>Vítimas de estupro e estupro de vulnerável, por sexo (em %)</h4>
           <p class="subtitulo3">Brasil, 2023</p>
 
           <div class="chart-container3">
-            <canvas id="graficoRoscaEstupro"></canvas>
+            <canvas id="graficoSexoEstupro"></canvas>
             <div class="legenda3">
-              <div class="legenda-item3"><div class="cor cor1"></div> Estupro</div>
-              <div class="legenda-item3"><div class="cor cor2"></div> Estupro de vulnerável</div>
+              <div class="legenda-item3"><div class="cor cor1"></div> Feminino</div>
+              <div class="legenda-item3"><div class="cor cor2"></div> Masculino</div>
             </div>
           </div>
 
-          <p class="fonte">
-            <strong>Fonte:</strong> Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Fórum Brasileiro de Segurança Pública.
+          <p class="fonte legenda-grafico">
+            <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros policiais e das Secretarias estaduais de Segurança Pública e/ou Defesa Social. Fórum Brasileiro de Segurança Pública, 2024.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção 5: Imagem + Texto -->
+    <div class="section section-pais">
+      <div class="content-row div-esquerda-pais">
+        <div class="taxa-pais">
+          <img width="100" height="800" src="./images/taxa-pais.png" alt="">
+        </div>
       </div>
 
-      <div class="column content-denuncias">
-        <h4>Vítimas de estupro e estupro de vulnerável, por sexo (em %)</h4>
-        <p class="subtitulo3">Brasil, 2023</p>
+      <div class="content-row div-direita-pais">
+        <div class="section-no-mercy">
+          <h3 id="titulo-faixa-etaria">Faixa etária das vítimas de estupro e estupro de vulnerável (em %)</h3>
+          <p class="subtitulo">Brasil, 2023</p>
 
-        <div class="chart-container3">
-          <canvas id="graficoSexoEstupro"></canvas>
-          <div class="legenda3">
-            <div class="legenda-item3"><div class="cor cor1"></div> Feminino</div>
-            <div class="legenda-item3"><div class="cor cor2"></div> Masculino</div>
+          <div class="chart-container">
+            <canvas id="graficoBarras"></canvas>
           </div>
+
+          <p class="fonte legenda-grafico">
+            <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros policiais e das Secretarias estaduais de Segurança Pública e/ou Defesa Social. Fórum Brasileiro de Segurança Pública, 2024.
+          </p>
         </div>
 
-        <p class="fonte">
-          <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros policiais e das Secretarias estaduais de Segurança Pública e/ou Defesa Social. Fórum Brasileiro de Segurança Pública, 2024.
-        </p>
+        <div class="section-no-mercy">
+            <table>
+        <caption>Relação entre vítima e autor para registros de estupro e estupro de vulnerável, por idade<br>Brasil, 2023</caption>
+        <thead>
+          <tr>
+            <th> </th>
+            <th>Até 13 anos</th>
+            <th>14 anos +</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Familiar</td>
+            <td>64,0</td>
+            <td>31,2</td>
+            <td>49,8</td>
+          </tr>
+          <tr>
+            <td>Parceiro íntimo</td>
+            <td>–</td>
+            <td>28,1</td>
+            <td>16,2</td>
+          </tr>
+          <tr>
+            <td>Ex-parceiro íntimo</td>
+            <td>–</td>
+            <td>9,9</td>
+            <td>4,6</td>
+          </tr>
+          <tr>
+            <td>Outros conhecidos</td>
+            <td>22,4</td>
+            <td>13,2</td>
+            <td>14,0</td>
+          </tr>
+          <tr>
+            <td>Desconhecidos</td>
+            <td>13,6</td>
+            <td>17,6</td>
+            <td>15,3</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="legenda-grafico">
+        <strong>Fonte:</strong> Polícia civil (dados extraídos dos boletins de ocorrência das unidades policiais civis). Elaboração: Fórum Brasileiro de Segurança Pública a partir dos dados do Sistema Nacional de Informações de Segurança Pública, Prisionais e sobre Drogas (Sinesp) - Ministério da Justiça e Segurança Pública, 2024.
       </div>
-    </div>
-  </div>
 
-  <!-- Seção 5: Imagem + Texto -->
-
-   <div class="section section-pais">
-    <div class="content-row div-esquerda-pais">
-      <div class="column">
-        <img width="100" src="./images/taxa-pais.webp" alt="">
-        <p>Fonte: Secretarias Estaduais de Segurança Pública e/ou Defesa Social; Ministério Público do Acre; Polícia Civil do Distrito Federal; Instituto de Segurança Pública/RJ (ISP); Censo 2022 - IBGE; Fórum Brasileiro de Segurança Pública</p>
-      </div>
-    </div>
-
-    <div class="content-row div-direita-pais">
-      <div class="column">
-        <h3>Faixa etária das vítimas de estupro e estupro de vulnerável (em %)</h3>
-        <p class="subtitulo">Brasil, 2023</p>
-
-        <div class="chart-container">
-          <canvas id="graficoBarras"></canvas>
         </div>
-
-        <p class="fonte">
-          <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros policiais e das Secretarias estaduais de Segurança Pública e/ou Defesa Social. Fórum Brasileiro de Segurança Pública, 2024.
-        </p>
-      </div>
-
-      <div class="column">
-          <table>
-      <caption>Relação entre vítima e autor para registros de estupro e estupro de vulnerável, por idade<br>Brasil, 2023</caption>
-      <thead>
-        <tr>
-          <th> </th>
-          <th>Até 13 anos</th>
-          <th>14 anos +</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Familiar</td>
-          <td>64,0</td>
-          <td>31,2</td>
-          <td>48,1</td>
-        </tr>
-        <tr>
-          <td>Parceiro íntimo</td>
-          <td>–</td>
-          <td>28,1</td>
-          <td>8,2</td>
-        </tr>
-        <tr>
-          <td>Ex-parceiro íntimo</td>
-          <td>–</td>
-          <td>6,3</td>
-          <td>4,6</td>
-        </tr>
-        <tr>
-          <td>Outros conhecidos</td>
-          <td>22,4</td>
-          <td>13,7</td>
-          <td>18,3</td>
-        </tr>
-        <tr>
-          <td>Desconhecidos</td>
-          <td>13,6</td>
-          <td>15,6</td>
-          <td>15,0</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="nota">
-      <strong>Fonte:</strong> Polícia civil (dados extraídos dos boletins de ocorrência das unidades policiais civis). Elaboração: Fórum Brasileiro de Segurança Pública a partir dos dados do Sistema Nacional de Informações de Segurança Pública, Prisionais e sobre Drogas (Sinesp) - Ministério da Justiça e Segurança Pública, 2024.
-    </div>
-
       </div>
     </div>
-  </div>
 
   <div class="section section-final">
     <div class="content-row">
-        <div class="column column-final column-final-esquerda">
+        <div style="border: 2px solid #9900FF" class="column column-final column-final-esquerda">
           <h3>Distribuição percentual das notificações de violência sexual por tipo de violência (Brasil, 2022)</h3>
     <div class="chart-container">
-      <canvas id="graficoRosca"></canvas>
+      <canvas width="230" height="230" id="graficoRosca"></canvas>
     </div>
     <p class="fonte">
       <strong>Fonte:</strong> Ministério da Saúde, Sistema de Informação de Agravos de Notificação (Sinan) – versão preliminar.
     </p>
         </div>
-        <div class="column column-final column-final-direita">
+        <div style="border: 2px solid #9900FF" class="content-imagem column column-final column-final-direita">
           <h3 class="text-4xl">Local em que ocorreu o estupro ou estupro de vulnerável (Brasil, 2022)</h3>
           <table>
             <thead>
@@ -341,210 +354,13 @@
               </tr>
             </tbody>
           </table>
-          <p class="fonte">
+          <p class="fonte legenda-grafico">
             <strong>Fonte:</strong> Análise produzida a partir dos microdados dos registros de boletins de ocorrência das Secretarias estaduais de Segurança Pública e Defesa Social. Fonte: Fórum Brasileiro de Segurança Pública, 2023.
           </p>
         </div>
       </div>
-    </div>
+  </div>
   </div>
   </main>
-
-  <script defer>
-    const barras = document.getElementById('graficoBarras').getContext('2d');
-
-    new Chart(barras, {
-      type: 'bar',
-      data: {
-        labels: ['0 a 4', '5 a 9', '10 a 13', '14 a 17', '18 a 19', '20 a 24', '25 a 29', '30 a 34', '35 a 39', '40 a 44', '45 a 49', '50 a 59', '60 ou +'],
-        datasets: [{
-          label: 'Percentual (%)',
-          data: [8.3, 19.0, 32.5, 16.0, 2.9, 5.1, 3.0, 2.9, 2.4, 1.3, 0.8, 0.5, 0.3],
-          backgroundColor: '#5E2A7B'
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Percentual (%)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Faixa Etária'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.raw + '%';
-              }
-            }
-          }
-        }
-      }
-    });
-  </script>
-
-  <script defer>
-    const ctx = document.getElementById('graficoRosca').getContext('2d');
-
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Amarela', 'branca', 'Indígena', 'Negra'],
-        datasets: [{
-          data: [0.4, 46.9, 0.5, 52.5],
-          backgroundColor: ['#ffa500', '#AED581', '#4DB6AC', '#7E57C2'],
-          borderColor: ['#fff', '#fff', '#fff', '#fff'],
-          borderWidth: 1,
-          hoverOffset: 4,
-          hoverBackgroundColor: ['#ff8c00', '#81C784', '#26A69A', '#5E35B1'],
-          hoverBorderColor: ['#fff', '#fff', '#fff', '#fff']
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'right'
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.label + ': ' + context.raw + '%';
-              }
-            }
-          }
-        }
-      }
-    });
-  </script>
-
-
-  <script defer>
-    const rosca3 = document.getElementById('graficoRoscaEstupro').getContext('2d');
-
-    new Chart(rosca3, {
-      type: 'doughnut',
-      data: {
-        labels: ['Estupro', 'Estupro de vulnerável'],
-        datasets: [{
-          data: [24, 76],
-          backgroundColor: ['#B39DDB', '#7E57C2'],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        cutout: '60%',
-        responsive: true,
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.label + ': ' + context.raw + '%';
-              }
-            }
-          }
-        }
-      }
-    });
-  </script>
-
-  <script defer>
-    const graficolinha = document.getElementById('graficoLinhaEstupro').getContext('2d');
-
-    new Chart(graficolinha, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-        datasets: [{
-          label: 'Nº de vítimas',
-          data: [43869, 50224, 51090, 50438, 47461, 55070, 63157, 66893, 69886, 62917, 68885, 78887, 83988],
-          borderColor: '#5E2A7B',
-          backgroundColor: '#5E2A7B',
-          fill: false,
-          tension: 0.3,
-          pointBackgroundColor: '#5E2A7B',
-          pointRadius: 4
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: false,
-            title: {
-              display: true,
-              text: 'Número de vítimas'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Ano'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.raw.toLocaleString('pt-BR') + ' vítimas';
-              }
-            }
-          }
-        }
-      }
-    });
-  </script>
-
-  <script defer>
-    const grafico5 = document.getElementById('graficoSexoEstupro').getContext('2d');
-
-    new Chart(grafico5, {
-      type: 'doughnut',
-      data: {
-        labels: ['Feminino', 'Masculino'],
-        datasets: [{
-          data: [88.2, 11.8],
-          backgroundColor: ['#B39DDB', '#5E2A7B'],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        cutout: '60%',
-        responsive: true,
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.label + ': ' + context.raw + '%';
-              }
-            }
-          }
-        }
-      }
-    });
-  </script>
 </body>
 </html>
