@@ -1,12 +1,12 @@
-const ctx = document.getElementById('graficoBarras').getContext('2d');
+const graficoBarras = document.getElementById('graficoBarras').getContext('2d');
 
-new Chart(ctx, {
+new Chart(graficoBarras, {
     type: 'bar',
     data: {
     labels: ['0 a 4', '5 a 9', '10 a 13', '14 a 17', '18 a 19', '20 a 24', '25 a 29', '30 a 34', '35 a 39', '40 a 44', '45 a 49', '50 a 59', '60 ou +'],
     datasets: [{
         label: 'Percentual (%)',
-        data: [8.3, 19.0, 32.5, 16.0, 2.9, 5.1, 3.0, 2.9, 2.4, 1.3, 0.8, 0.5, 0.3],
+        data: [11.1, 18.0, 32.5, 16.0, 2.9, 5.1, 3.8, 2.9, 2.4, 1.9, 1.3, 0.8, 0.5, 0.9],
         backgroundColor: '#5E2A7B'
     }]
     },
@@ -16,13 +16,13 @@ new Chart(ctx, {
         y: {
         beginAtZero: true,
         title: {
-            display: true,
+            display: false,
             text: 'Percentual (%)'
         }
         },
         x: {
         title: {
-            display: true,
+            display: false,
             text: 'Faixa Etária'
         }
         }
