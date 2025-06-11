@@ -524,3 +524,20 @@ caption {
   border-radius: 8px;
   padding: 15px;
 }
+
+#graficoLinhaEstupro {
+  height: 300px;
+}
+
+.text-image2 {
+  font-size: 11px; 
+}
+
+.taxa-pais img {
+  max-height: 500px;
+  width: auto; /* Ajusta a largura automaticamente para manter a proporção */
+}
+
+.text-gray-800 {
+  text-align: justify; /* Justifica o texto */
+}
