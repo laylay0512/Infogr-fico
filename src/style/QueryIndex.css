@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
 
   main{
+    margin: auto;
     width: 95%;
   }
 
