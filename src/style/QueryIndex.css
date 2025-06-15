@@ -1,7 +1,10 @@
-@media screen and (max-width: 768px) {
-
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  body, html {
+    width: 100vw;
+    margin: auto; 
+  }
   main{
-    width: 95%;
+    width: 100vw;
   }
 
   h1.text-4xl {
