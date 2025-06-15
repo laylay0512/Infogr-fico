@@ -219,6 +219,7 @@ h3.text-xl{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
 }
 .modal-content {
     background-color: white;
