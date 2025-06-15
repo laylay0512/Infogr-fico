@@ -1,6 +1,6 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
   body, html {
-    width: 100vw;
+    width: 118vw;
     margin: auto; 
   }
   main{
